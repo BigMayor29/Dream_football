@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#07130d">
+  <title>Dream Football</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-ball">⚽</span><span>DREAM <b>FOOTBALL</b></span></div>
+      <div class="top-actions"><span class="pill">MOBILE EDITION</span><button id="pauseBtn" class="small-btn" aria-label="Pause">Ⅱ</button></div>
+    </header>
+
+    <section id="menu" class="menu">
+      <div class="hero">
+        <div class="eyebrow">YOUR CLUB. YOUR DREAM.</div>
+        <h1>THE BEAUTIFUL<br><em>GAME.</em></h1>
+        <p>A quick football match built for your phone. Play in landscape for the best experience.</p>
+        <div class="menu-stats"><div><b>5v5</b><small>ARCADE MATCH</small></div><div><b>100%</b><small>TOUCH READY</small></div><div><b>FREE</b><small>PLAY NOW</small></div></div>
+        <button id="startBtn" class="primary-btn">KICK OFF <span>➜</span></button>
+        <button id="careerBtn" class="secondary-btn">CAREER MODE <span>★</span></button>
+        <div id="careerInfo" class="career-info"></div>
+      </div>
+      <div class="menu-art"><div class="glow"></div><div class="art-ball">⚽</div><div class="art-label">DF<span> / 01</span></div></div>
+    </section>
+
+    <section id="game" class="game hidden">
+      <div class="scoreboard">
+        <div class="team"><span class="team-mark home-mark">D</span><div><b>DREAM FC</b><small>HOME</small></div></div>
+        <div class="score"><span id="homeScore">0</span><i>:</i><span id="awayScore">0</span><small id="clock">00:00</small></div>
+        <div class="team away"><div><b>RIVAL FC</b><small>AWAY</small></div><span class="team-mark away-mark">R</span></div>
+      </div>
+      <div id="fieldWrap" class="field-wrap">
+        <canvas id="pitch" aria-label="Football game field"></canvas>
+        <div id="toast" class="toast">KICK OFF!</div>
+      </div>
+      <div class="controls">
+        <div class="move-zone">
+          <div class="control-caption">MOVE</div>
+          <div id="joystick" class="joystick"><div id="stick" class="stick"></div></div>
+        </div>
+        <div class="action-zone">
+          <button id="sprintBtn" class="action-btn sprint"><span>⚡</span><small>SPRINT</small></button>
+          <button id="passBtn" class="action-btn"><span>➤</span><small>PASS</small></button>
+          <button id="shootBtn" class="action-btn shoot"><span>◉</span><small>SHOOT</small></button>
+        </div>
+      </div>
+      <div class="hint">MOVE with the joystick · PASS to a teammate · SHOOT toward the goal</div>
+    </section>
+    <div id="pauseOverlay" class="overlay hidden"><div class="modal"><div class="eyebrow">MATCH PAUSED</div><h2>TAKE A BREATHER.</h2><button id="resumeBtn" class="primary-btn">RESUME MATCH ➜</button><button id="menuBtn" class="secondary-btn">QUIT TO MENU</button></div></div>
+    <footer>Dream Football <span>•</span> Arcade prototype</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
